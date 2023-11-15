@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-nome">PICHAI</h1>
+            </div>
+            <div id="buscar">
+                <input type="text" id="buscar-input" placeholder="Pesquisar Produto" oninput="buscarProduto()">
+                <button onclick="buscarsite()">Buscar</button>
+            </div>
+            <div id="carrinho-icon" onclick="toggleCarrinho()">
+                <div class="imagem">
+                    <img class="cesta" src="img/cesta.jpg" alt="">
+                </div>
+                <span id="cont-carrinho">0</span>
+            </div>
+            <div id="carrinho-itens" style="display: none;">
+                <ul id="itens-lista"></ul>
+                <span id="preco-total">Total: R$0.00</span>
+                <button class="limpa" onclick="limparCarrinho()">Limpar Carrinho</button>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main id="main">
+        <div class="container">
+            <div class="nome">
+                <h2 class="nome-secao">Meus Produtos:</h2>
+            </div>
+            <div class="produtos">
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/moniot.jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>MONITOR 144HZ</h3>
+                            <p>R$ 1200.00</p>
+                            <button onclick="addCarrinho('Monitor 144HZ', 1200.00)">Adicionar</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/pc gamer.jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>PC GAMER</h3>
+                            <p>R$ 4300.00</p>
+                            <button onclick="addCarrinho('PC GAMER', 4300.00)">Adicionar</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/ps4.jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>PLAYSTATION 4</h3>
+                            <p>R$ 1500.00</p>
+                            <button onclick="addCarrinho('PLAYSTATION 4', 1500.00)">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/ps5.jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>PLAYSTATION 5</h3>
+                            <p>R$ 3000.00</p>
+                            <button onclick="addCarrinho('PLAYSTATION 5', 3000.00)">Adicionar</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/ck61.jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>TECLADO CK61</h3>
+                            <p>R$ 250.00</p>
+                            <button onclick="addCarrinho('TECLADO CK61', 250.00)">Adicionar</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/dareu.jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>MOUSE DAREU </h3>
+                            <p>R$ 150.00</p>
+                            <button onclick="addCarrinho('MOUSE DAREU', 150.00)">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <br><br><br>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
